@@ -14,17 +14,26 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
         Console.WriteLine("Введите количество столбцов массива:");
-        int a = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Введите количество строк массива:");
         int b = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите количество строк массива:");
+        int a = Convert.ToInt32(Console.ReadLine());
         int[,] array = new int[a, b];
         Console.WriteLine("Введите строку чисел для создания массива:");
         string value = Convert.ToString(Console.ReadLine());
-        
+
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-
+        int ind = 0;
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < b; j++)
+            {
+                Console.Write($"{value[ind]}\t");
+                ind++;
+            }
+            Console.WriteLine();
+        }
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
